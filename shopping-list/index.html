@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Shopping List</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <!-- <script src="https://unpkg.com/jquery"></script> -->
+  </head>
+  <body id="root">
+    <div class="flex items-center justify-between">
+      <input
+        class="border rounded p-1 d-block w-full"
+        placeholder="add item"
+        id="current-item"
+      />
+      <button
+        id="add-item"
+        class="py-1 px-3 bg-gray-600 rounded text-white ml-4"
+        onclick="_addItem()"
+      >
+        Add
+      </button>
+    </div>
+    <hr class="my-5" />
+    <div class="flex items-center justify-between">
+      <div>
+        <input
+          onclick="_toggleView()"
+          id="toggle-pending"
+          type="checkbox"
+          class="mr-2"
+        />
+        <label for="toggle-pending">Only Pending</label>
+      </div>
+      <div>
+        <a id="sort" onclick="_sortByDateAsc()" class="cursor-pointer"
+          >Sort by date</a
+        >
+      </div>
+    </div>
+    <hr class="my-5" />
+    <div id="list-container">
+      <div class="unit flex items-center justify-between">
+        <div>
+          <input type="checkbox" class="mr-2" /> Mollit Lorem veniam
+          nisi non Lorem nisi minim deserunt.
+        </div>
+        <div class="cursor-pointer text-red-400">Del</div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
